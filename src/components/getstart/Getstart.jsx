@@ -4,7 +4,7 @@ import "./Getstart.css";
 export const Getstart = () => {
   return (
     <div className="getstartcontain">
-      <div className="getstart-title">Getting started</div>
+      <div className="getstart-title">Getting start</div>
       <div className="getstart-option">
         <div className="getstarticon">
           <i class="fa-solid fa-wallet fa-5x"></i>

@@ -14,7 +14,7 @@ export const Header = () => {
             <a href="#market">Market</a>
           </li>
           <li>
-            <a href="#choose-us">Choose Us</a>
+            <a href="#getstart">Getting start</a>
           </li>
           <li>
             <a href="#join">Join</a>

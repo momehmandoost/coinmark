@@ -71,3 +71,10 @@
     display: flex;
     gap: 1rem;
 }
+
+@media (max-width: 800px) {
+
+    .menu {
+        display: none;
+    }
+}

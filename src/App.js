@@ -27,7 +27,7 @@ function App() {
       </section>
 
 
-      <div className='getstart-rest'>
+      <div className='getstart-rest' id="getstart">
         <section className='getstart'>
           <Getstart />
         </section>
