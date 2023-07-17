@@ -1,0 +1,73 @@
+.logo {
+    font-family: Poppins;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    /* letter-spacing: 0.09375rem; */
+    text-transform: uppercase;
+    background: var(--linear-purple-blue-style, linear-gradient(126deg, #9B51E0 0%, #3081ED 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+    z-index: 2000000;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    font-family: Inter;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 120rem;
+    padding: 1rem 2rem;
+    background: #1f1d2b;
+    width: 100% !important;
+
+}
+
+.navbar ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+.navbar ul a {
+    color: #e9e9e9;
+    font-weight: 300;
+
+
+}
+
+.navbar ul a:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(126deg, #9B51E0 0%, #3081ED 100%);
+    color: transparent;
+    transition: all .3s;
+    text-decoration: solid !important;
+
+}
+
+.navbar i {
+    color: white;
+}
+
+.navbar i:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(126deg, #9B51E0 0%, #3081ED 100%);
+    color: transparent;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.navbar span {
+    display: flex;
+    gap: 1rem;
+}

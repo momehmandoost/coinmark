@@ -1,0 +1,63 @@
+.coinrow {
+
+    grid-gap: 2rem;
+    color: #fff;
+    display: grid;
+    font-size: 3rem;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    width: 100%;
+}
+
+.slider-coin__name {
+    font-size: 2rem;
+}
+
+.slider-coin__price {
+    font-size: 1.5rem;
+}
+
+.slider-coin img {
+    height: 9rem;
+    margin-bottom: 1rem;
+    width: 9rem
+}
+
+.coinitem {
+    display: flex;
+    align-items: center;
+}
+
+.coinitem a {
+    text-align: center;
+}
+
+.coinitem img {
+    animation: move 2s infinite;
+    margin-bottom: 4rem;
+}
+
+.coinitem {
+    font-family: Inter;
+}
+
+.coinitem p {
+    color: white;
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0) scale(.14);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-20px) scale(.14);
+        transform: translateY(-20px);
+    }
+}
+
+

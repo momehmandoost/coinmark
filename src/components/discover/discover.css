@@ -1,0 +1,95 @@
+.hero-content {
+    margin: 4rem auto;
+    max-width: 100rem;
+    padding: 10rem 2rem;
+
+    grid-gap: 2rem;
+    color: #fff;
+    display: grid;
+    font-size: 3rem;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    width: 100%;
+}
+
+.price {
+    width: 36.0625rem;
+    height: 29.5625rem;
+    border-radius: 2.18906rem;
+    background: linear-gradient(139deg, rgb(47 54 60 / 8%) 0%, rgba(65, 48, 90, 0.08) 100%);
+    -webkit-backdrop-filter: blur(555px);
+    backdrop-filter: blur(95px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.hero-text-title {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 5.125rem;
+    letter-spacing: -0.125rem;
+    padding-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-family: Inter;
+    color: #E2E2E2;
+
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem;
+    /* 150% */
+    letter-spacing: 0.03125rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero-btn {
+    display: flex;
+    margin: 0.5rem;
+    gap: 1.5rem;
+}
+
+.hero-btn-grad {
+    font-family: Inter;
+    font-size: 1.5rem;
+    display: flex;
+    width: 9.625rem;
+    padding: 0.75rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background: linear-gradient(133deg, #9B51E0 19.72%, rgba(48, 129, 237, 0.80) 100%);
+
+}
+
+.hero-btn-outline {
+    font-family: Inter;
+    font-size: 1.5rem;
+    display: flex;
+    width: 9.625rem;
+    padding: 0.75rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid #D7D7D7;
+
+}
+
+@media (max-width: 1100px) {
+    .hero-content {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10rem;
+    }
+}

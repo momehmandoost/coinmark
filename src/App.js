@@ -1,23 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import { Discover } from './components/discover/Discover';
+import { Header } from './components/header/Header'
+import { Market } from './components/market/Market';
+import { Getstart } from "./components/getstart/Getstart";
+import { Community } from "./components/community/Community";
+import { Foot } from "./components/footer/Foot";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='home' id="home">
+      <nav>
+        <Header />
+
+      </nav>
+
+      <div className="containnav">
+
+
+        <section>
+          <Discover />
+        </section>
+
+      </div>
+      <section className='rest' id="market">
+        <Market />
+      </section>
+
+
+      <div className='getstart-rest'>
+        <section className='getstart'>
+          <Getstart />
+        </section>
+        <div className="community" id="join">
+          <Community />
+        </div>
+        <footer>
+          <Foot />
+        </footer>
+      </div>
+
+
+
     </div>
   );
 }

@@ -1,0 +1,71 @@
+.getstartcontain {
+
+    width: 80%;
+    margin: 8rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.getstart-title {
+    color: white;
+    /* Heading Text/H2/Poppins/48/Medium */
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 72px;
+    /* 150% */
+    letter-spacing: -1px;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.getstart-option {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+
+.getstarticon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.getstarticon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: -3.013333320617676px 3.013333320617676px 3.013333320617676px 0px rgba(255, 255, 255, 0.39) inset, 2.009999990463257px -2.009999990463257px 20px 0px rgba(214, 214, 214, 0.17) inset;
+    backdrop-filter: blur(37.21466827392578px);
+    width: 9.375rem;
+    height: 8.625rem;
+    margin-bottom: 4rem;
+}
+
+.getstarticon-des {
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+
+}
+
+
+
+
+@media (max-width: 1100px) {
+    .getstart-option {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
