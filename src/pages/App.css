@@ -14,7 +14,7 @@
 }
 
 .containnav {
-  background-image: url("./assets/backheader3.png");
+  background-image: url("../assets/backheader3.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -31,7 +31,7 @@
 }
 
 .getstart {
-  background: url("./assets/backgetstart2.png");
+  background: url("../assets/backgetstart2.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;

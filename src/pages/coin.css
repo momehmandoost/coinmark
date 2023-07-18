@@ -1,0 +1,18 @@
+.coinback {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg-color);
+    /* background-color: #1f1d2b; */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
