@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Coindescription.css";
 
 export const Coindecription = () => {
   return (
