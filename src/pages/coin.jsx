@@ -1,7 +1,23 @@
-import React from 'react'
+import React from "react";
+import "./coin.css";
+import { Header } from "../components/header/Header";
+import { Foot } from "../components/footer/Foot";
+import { Coindecription } from "./Coindecription";
 
-export const coin = () => {
+export const Coin = () => {
   return (
-    <div>coin</div>
-  )
-}
+    <div className="coinback">
+      <div className="container">
+        <nav>
+          <Header />
+        </nav>
+        <div className="coindescription">
+          <Coindecription />
+        </div>
+        <footer>
+          <Foot />
+        </footer>
+      </div>
+    </div>
+  );
+};
