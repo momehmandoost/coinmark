@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CoinContext } from "../../Api/api";
 import "./coinslider.css";
+import "../loading/Loading";
+import { Loading } from "../loading/Loading";
 
 export const Coinslider = () => {
   const { getBitcoin, getEther } = useContext(CoinContext);
@@ -56,7 +58,7 @@ export const Coinslider = () => {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <Loading />
       )}
     </div>
   );
