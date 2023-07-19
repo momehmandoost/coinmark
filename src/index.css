@@ -23,6 +23,14 @@ a {
   text-decoration: none;
 }
 
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: #321856;
   border: 1px solid #fff;
