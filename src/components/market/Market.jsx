@@ -26,6 +26,10 @@ export const Market = () => {
     );
   }
 
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   return (
     <div>
       <div class="market-content">
@@ -44,7 +48,7 @@ export const Market = () => {
                   <span>
                     <img src={coin.image} alt={coin.id} /> {coin.id}
                   </span>
-                  <p>{coin.current_price}</p>
+                  <p>${numberWithCommas(coin.current_price.toFixed(2))}</p>
                   <p
                     className={
                       "slider-coin__price " +
@@ -55,7 +59,7 @@ export const Market = () => {
                   >
                     {coin.price_change_percentage_24h}%
                   </p>
-                  <p>${coin.market_cap}</p>
+                  <p>{numberWithCommas(coin.market_cap)}</p>
                 </a>
               </Link>
             ))}
