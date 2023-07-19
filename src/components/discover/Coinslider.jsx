@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CoinContext } from "../../Api/api";
-import "./coinslider.css"
+import "./coinslider.css";
 
 export const Coinslider = () => {
   const { getBitcoin, getEther } = useContext(CoinContext);
@@ -32,7 +32,7 @@ export const Coinslider = () => {
               <p className="slider-coin__name">
                 Bitcoin
                 <span className="slider-coin__price red-text">
-                  {bitcoinData[0].price_change_percentage_24h}%
+                  {bitcoinData[0].price_change_percentage_24h.toFixed(2)}%
                 </span>
               </p>
               <p className="slider-coin__price">
@@ -46,7 +46,7 @@ export const Coinslider = () => {
               <p className="slider-coin__name">
                 Ethereum
                 <span className="slider-coin__price red-text">
-                  {etherData[0].price_change_percentage_24h}%
+                  {etherData[0].price_change_percentage_24h.toFixed(2)}%
                 </span>
               </p>
               <p className="slider-coin__price">
