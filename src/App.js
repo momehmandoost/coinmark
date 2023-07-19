@@ -9,10 +9,10 @@ const App = () => {
     <CoinProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/coin" element={<Coin />}>
-        <Route path=":coinId" element={<Coin />}></Route>
-      </Route> */}
-        <Route path="/coin" element={<Coin />} />
+        <Route path="/coin" element={<Coin />}>
+          <Route path=":coinId" element={<Coin />}></Route>
+        </Route>
+
       </Routes>
     </CoinProvider>
   )
