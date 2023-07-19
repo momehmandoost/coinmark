@@ -4,6 +4,7 @@ import { useContext, useState, useEffect } from "react";
 
 import { CoinContext } from "../../Api/api";
 import { Link } from "react-router-dom";
+import { Loading } from "../loading/Loading";
 
 export const Market = () => {
   const { getCoinPerPage, coins } = useContext(CoinContext);
@@ -42,27 +43,31 @@ export const Market = () => {
             <p>Market Cap</p>
           </div>
           <div className="market-content__coin-list__row">
-            {coins.map((coin) => (
-              <Link to={`/coin/${coin.id}`}>
-                <a className="coin-row">
-                  <span>
-                    <img src={coin.image} alt={coin.id} /> {coin.id}
-                  </span>
-                  <p>${numberWithCommas(coin.current_price.toFixed(2))}</p>
-                  <p
-                    className={
-                      "slider-coin__price " +
-                      (coin.price_change_percentage_24h >= 0
-                        ? "green-text"
-                        : "red-text")
-                    }
-                  >
-                    {coin.price_change_percentage_24h}%
-                  </p>
-                  <p>{numberWithCommas(coin.market_cap)}</p>
-                </a>
-              </Link>
-            ))}
+            {coins ? (
+              coins.map((coin) => (
+                <Link to={`/coin/${coin.id}`}>
+                  <a className="coin-row">
+                    <span>
+                      <img src={coin.image} alt={coin.id} /> {coin.id}
+                    </span>
+                    <p>${numberWithCommas(coin.current_price.toFixed(2))}</p>
+                    <p
+                      className={
+                        "slider-coin__price " +
+                        (coin.price_change_percentage_24h >= 0
+                          ? "green-text"
+                          : "red-text")
+                      }
+                    >
+                      {coin.price_change_percentage_24h}%
+                    </p>
+                    <p>{numberWithCommas(coin.market_cap)}</p>
+                  </a>
+                </Link>
+              ))
+            ) : (
+              <Loading />
+            )}
           </div>
         </div>
         <div class="market-content__coin-list__pagination">
