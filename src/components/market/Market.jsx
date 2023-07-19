@@ -1,7 +1,22 @@
 import React from "react";
 import "./market.css";
+import { useContext, useState, useEffect } from "react";
+
+import { CoinContext } from "../../Api/api";
 
 export const Market = () => {
+  const { getBitcoin } = useContext(CoinContext);
+  const [bitcoinPrice, setBitcoinPrice] = useState(null);
+
+  useEffect(() => {
+    fetchBitcoinPrice();
+  }, []);
+
+  const fetchBitcoinPrice = async () => {
+    const bitcoinData = await getBitcoin();
+    const price = bitcoinData[0]?.current_price || null;
+    setBitcoinPrice(price);
+  };
   return (
     <div>
       <div class="market-content">
@@ -142,6 +157,15 @@ export const Market = () => {
           <button class="">3</button>
           <button class="">4</button>
           <button class="">5</button>
+        </div>
+
+        <div>
+          <h1>Bitcoin Price</h1>
+          {bitcoinPrice !== null ? (
+            <p>The current price of Bitcoin is ${bitcoinPrice}</p>
+          ) : (
+            <p>Loading...</p>
+          )}
         </div>
       </div>
     </div>
