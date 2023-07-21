@@ -1,61 +1,65 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { CoinContext } from "../../Api/api";
 import "./coinslider.css";
+import "../loading/Loading";
+import { Loading } from "../loading/Loading";
 
 export const Coinslider = () => {
+  const { getBitcoin, getEther } = useContext(CoinContext);
+  const [bitcoinData, setBitcoinData] = useState(null);
+  const [etherData, setEtherData] = useState(null);
+
+  useEffect(() => {
+    fetchBitcoinData();
+    fetchEtherData();
+  }, []);
+
+  const fetchBitcoinData = async () => {
+    const data = await getBitcoin();
+    setBitcoinData(data);
+  };
+
+  const fetchEtherData = async () => {
+    const data = await getEther();
+    setEtherData(data);
+  };
+
   return (
     <div className="coin-slider">
-      <div className="coinrow">
-        <div className="coinitem">
-          <a className="slider-coin" href="/coin/bitcoin">
-            <img
-              src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
-              alt="Bitcoin"
-            />
-            <p className="slider-coin__name">
-              Bitcoin<span class="slider-coin__price red-text">-0.17%</span>
-            </p>
-            <p className="slider-coin__price">$ 30,266.00</p>
-          </a>
+      {bitcoinData && bitcoinData[0] && etherData && etherData[0] ? (
+        <div className="coinrow">
+          <div className="coinitem">
+            <a className="slider-coin" href="/coin/bitcoin">
+              <img src={bitcoinData[0].image} alt={bitcoinData[0].id} />
+              <p className="slider-coin__name">
+                Bitcoin
+                <span className="slider-coin__price red-text">
+                  {bitcoinData[0].price_change_percentage_24h.toFixed(2)}%
+                </span>
+              </p>
+              <p className="slider-coin__price">
+                ${bitcoinData[0].current_price}
+              </p>
+            </a>
+          </div>
+          <div className="coinitem">
+            <a className="slider-coin" href="/coin/ethereum">
+              <img src={etherData[0].image} alt={etherData[0].id} />
+              <p className="slider-coin__name">
+                Ethereum
+                <span className="slider-coin__price red-text">
+                  {etherData[0].price_change_percentage_24h.toFixed(2)}%
+                </span>
+              </p>
+              <p className="slider-coin__price">
+                ${etherData[0].current_price}
+              </p>
+            </a>
+          </div>
         </div>
-        <div className="coinitem">
-          <a className="slider-coin" href="/coin/ethereum">
-            <img
-              src="https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880"
-              alt="Ethereum"
-            />
-            <p className="slider-coin__name">
-              Ethereum<span class="slider-coin__price red-text">-0.22%</span>
-            </p>
-            <p class="slider-coin__price">$ 1,928.68</p>
-          </a>
-        </div>
-      </div>
-      {/* <div className="coinrow">
-        <div className="coinitem">
-          <a className="slider-coin" href="/coin/tether">
-            <img
-              src="https://assets.coingecko.com/coins/images/325/large/Tether.png?1668148663"
-              alt="Tether"
-            />
-            <p className="slider-coin__name">
-              Tether <span class="slider-coin__price green-text">0.06%</span>
-            </p>
-            <p className="slider-coin__price">$ 1.00</p>
-          </a>
-        </div>
-        <div className="coinitem">
-          <a className="slider-coin" href="/coin/ripple">
-            <img
-              src="https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731"
-              alt="XRP"
-            />
-            <p className="slider-coin__name">
-              XRP <span class="slider-coin__price green-text">3.31%</span>
-            </p>
-            <p className="slider-coin__price">$ 0.75</p>
-          </a>
-        </div>
-      </div> */}
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 };
