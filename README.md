@@ -18,8 +18,10 @@ Key Features:
 ### Stacks:
 
 » React JS  
+
 » Coingecko API
-» Vanila CSS
+
+» Vanilla CSS
 
 
 ### Screenshots:
