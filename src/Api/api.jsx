@@ -63,11 +63,29 @@ export function CoinProvider({ children }) {
     }
   }
 
+  async function getDescri(id) {
+    try {
+      const url = `https://api.coingecko.com/api/v3/coins/${id}`;
+
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch  data");
+      }
+
+      const json = await response.json();
+      return json;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   const ContextValue = {
     coins,
     getCoinPerPage,
     getBitcoin,
     getEther,
+    getDescri,
   };
 
   return (

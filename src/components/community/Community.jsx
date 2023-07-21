@@ -7,15 +7,15 @@ export const Community = () => {
       <div class="join-content">
         <img
           alt="coin_img"
-          class="join-content__btc"
+          className="join-content__btc"
           src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
         />
         <img
           alt="coin_img"
-          class="join-content__eth"
+          className="join-content__eth"
           src="https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880"
         />
-        <div class="join-content__text">
+        <div className="join-content__text">
           <h2>
             join us via <br /> <span>discord</span>
           </h2>

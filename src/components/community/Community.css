@@ -23,7 +23,7 @@
 .join-content__btc {
     -webkit-animation: movecoin 2s infinite;
     animation: movecoin 2s infinite;
-    left: 215px;
+    left: 198px;
     top: 50px;
 }
 
@@ -90,7 +90,7 @@
     .join-content__btc,
     .join-content__eth {
         display: none;
-        
+
     }
 
 }

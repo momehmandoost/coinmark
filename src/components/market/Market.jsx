@@ -70,7 +70,7 @@ export const Market = () => {
             )}
           </div>
         </div>
-        <div class="market-content__coin-list__pagination">
+        <div className="market-content__coin-list__pagination">
           {paginationButtons}
         </div>
 

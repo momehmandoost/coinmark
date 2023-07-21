@@ -1,12 +1,15 @@
 import { useState } from "react";
 import React from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [click, setClick] = useState(false);
   return (
     <div className="navbar">
-      <div className="logo">COINMARK</div>
+      <Link to={"/"}>
+        <div className="logo">COINMARK</div>
+      </Link>
       <div className="menu">
         <ul>
           <li>
