@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: #1f1d2b;
+  --main-linear-gradient: linear-gradient(126deg, #9B51E0 0%, #3081ED 100%);
 }
 
 * {
@@ -12,6 +13,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-family: 'Poppins', sans-serif;
 
+  background-color: var(--main-bg-color);
 }
 
 code {
@@ -21,6 +23,14 @@ code {
 
 a {
   text-decoration: none;
+}
+
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
 }
 
 ::-webkit-scrollbar-thumb {
