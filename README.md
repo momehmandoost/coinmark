@@ -1,4 +1,4 @@
-## CoinMark
+## CoinMarkk
 
 Welcome to CoinMark- Your Ultimate Crypto Search Tool!
 
